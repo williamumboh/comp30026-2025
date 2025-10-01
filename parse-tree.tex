@@ -1,0 +1,25 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{forest}
+
+\begin{document}
+
+\begin{forest}
+for tree={l sep=20pt}
+[Expr, 
+  [Expr,
+    [(]
+    [Expr,
+      [Expr, [5]]
+      [Op, [+]]
+      [Expr, [3]]
+    ]
+    [)]
+  ]
+  [Op, [$\times$]
+  ]
+  [Expr, [4]
+  ]
+]
+\end{forest}
+\end{document}

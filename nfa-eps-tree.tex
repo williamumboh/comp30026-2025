@@ -1,0 +1,20 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{forest}
+
+\begin{document}
+\begin{forest}
+for tree={circle,draw, l sep=20pt, anchor=base west, grow=east}
+[$q_0$, 
+  [$q_0$, edge label={node[midway,above] {1}}
+       [$q_3$, edge label={node[midway,above] {0}}],
+  [$q_1$, edge label={node[midway,above] {$\epsilon$}}
+  [$q_2$, edge label={node[midway,above] {0}}]]
+  ]
+  [$q_1$, edge label={node[midway,above] {$\epsilon$}}
+  [$q_3$, edge label={node[midway,above] {1}}
+  [$q_3$, edge label={node[midway,above] {0}}]]
+]
+]
+\end{forest}
+\end{document}

@@ -1,0 +1,8 @@
+# MyST build outputs
+_build
+*.log
+*.aux
+*.fls
+*.fdb_latexmk
+.DS_Store
+.pdf-view-restore
