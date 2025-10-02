@@ -36,11 +36,8 @@ project:
       children:
         - file: cfg.md
         - file: pda.md
+    - file: high-level.md
     - file: appendix.md
-  exports:
-    - format: pdf
-      template: plain_latex_book
-      output: exports/book.pdf
 
 site:
   template: book-theme
