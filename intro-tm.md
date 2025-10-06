@@ -77,8 +77,10 @@ A Turing machine $M$ consists of:
 
 The transition function can also be represented using a state transition
 diagram as was done for finite and pushdown automata. The transition
-$\delta(q,x) = (r,y,d)$ is represented by
-$q \xrightarrow{x \rightarrow y; d} r$.
+$\delta(q,a) = (r,b,d)$ is represented by
+$q \xrightarrow{a \rightarrow b, d} r$. For transitions that do not
+overwrite the symbol under the tape head with a different symbol, i.e.
+$\delta(q,a) = (r,a,d)$, we use $q \xrightarrow{a \rightarrow d} r$.
 
 Let $M$ be a Turing machine. Consider an input string
 $w = v_1 v_2 \cdots v_n$ where each $v_i$ is a symbol of the alphabet.
@@ -118,8 +120,8 @@ on every input.
 ::: {prf:definition} Turing machine acceptance and language
 
 A string $w$ is said to be *accepted* by a TM $M$ if $M$ eventually
-enters $q_{acc}$ and is said to be *rejected* otherwise: if $M$ enters
-the $q_{rej}$ state or never halts.
+enters $q_{acc}$ and is said to be *rejected* if $M$ eventually enters
+the $q_{rej}$ state.
 
 The language of a TM $M$ is the set of strings accepted by $M$. We use
 $L(M)$ to mean the language of $M$.
@@ -132,6 +134,67 @@ A language $A$ is *Turing-recognizable*[^1] if there exists a TM $M$
 such that $A = L(M)$, and *Turing-decidable* if there exists a TM $M$
 such that $A = L(M)$ **and** $M$ is a decider. We say that $A$ is
 *recognized* by $M$ and *decided* by $M$, respectively.
+
+:::
+
+### Configurations
+
+We now explain in more detail exactly what a single step of computation
+in a Turing machine looks like.
+
+::: {prf:definition} TM Configuration
+
+The *configuration* of a Turing machine $M$ on an input string $w$ is a
+snapshot of its execution at a point in time. In particular, the
+configuration consists of:
+
+- the current state
+- the current state of the tape (i.e. the contents of the tape)
+- the current location of the tape head
+
+We use the following notation for a configuration: we write $xqy$ to
+mean that the current state is $q$, the contents of the tape is $xy$ and
+the tape head is on the first symbol of $y$.
+
+:::
+
+Let $C$ and $C'$ be two configurations. We say that $C$ *yields* $C'$
+iff applying $\delta$ to $C$ results in $C'$ and write
+$C \Rightarrow C'$.
+
+::: {prf:example}
+
+Let $C$ be the configuration in which the tape has the string $ababb$
+followed by an infinite sequence of blanks, the current state is $q$ and
+the tape head is on the third symbol $a$. Then, we write $C = abqabb$.
+
+If $\delta(q,a) = (r,b,R)$, then $C$ yields the configuration
+$C' = abbrbb$.
+
+:::
+
+The initial configuration of $M$ on $w$ is $q_0w$: the state is the
+initial state, the tape contains the input $w$ and the tape head is at
+the start of the tape.
+
+With these definitions, it is now clear that:
+
+- $M$ halts and accepts on input $w$ if after applying the transition
+  function to the initial configuration a finite number of times, we
+  obtain a configuration whose state is $q_{acc}$.
+- $M$ halts and rejects on input $w$ if after applying the transition
+  function to the initial configuration a finite number of times, we
+  obtain a configuration whose state is $q_{rej}$.
+- $M$ never halts if it is not possible to obtain a configuration whose
+  state is either $q_{acc}$ or $q_{rej}$ after applying the transition
+  function to the initial configuration a finite number of times.
+
+::: {prf:example} while loop
+
+Here is an example of a TM that never halts on any input. The TM simply
+moves the tape head to the right forever.
+
+:::::: {figure width=100px} ./tm-non-halting.png
 
 :::
 
@@ -176,20 +239,14 @@ symbol '#'. Moreover, to keep track of the tape heads, $S$ uses a
 "marked" version of each tape symbol of $M$. In particular, for each
 tape symbol of $M$, there is a marked version $\dot x$.
 
-To simulate a transition of $M$, $S$ scans the tape to determine the
-symbols under the tape heads of $M$, and then scans the tape to update
-it (the contents of the tape as well as the tape head locations)
+To simulate a transition of $M$, the TM $S$ scans the tape to determine
+the symbols under the tape heads of $M$, and then scans the tape to
+update it (the contents of the tape as well as the tape head locations)
 according to the transition function of $M$. The TM $S$ shifts the tape
 contents to create more room, if needed.
 
 The TM $S$ halts and accepts/rejects when $M$ does.
 
 :::
-
-## Rough outline
-
-## Review previous years, CS103
-
-## Introduction to TMs
 
 [^1]: Also called *semi-decidable*.

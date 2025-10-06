@@ -64,9 +64,6 @@ implicitly that if the automaton has to take an unspecified state
 transition, then the string is rejected. These are called *incomplete*
 automata.
 
-For all assessments, you must use *complete* automata that specifies all
-transitions.
-
 :::
 
 Unlike finite automata, it turns out that nondeterministic pushdown
