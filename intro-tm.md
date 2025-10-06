@@ -137,6 +137,8 @@ such that $A = L(M)$ **and** $M$ is a decider. We say that $A$ is
 
 :::
 
+(sec-tm-config)=
+
 ### Configurations
 
 We now explain in more detail exactly what a single step of computation
@@ -195,57 +197,6 @@ Here is an example of a TM that never halts on any input. The TM simply
 moves the tape head to the right forever.
 
 :::::: {figure width=100px} ./tm-non-halting.png
-
-:::
-
-In the next two sections, we will see that while we can define Turing
-machines with extra capabilities, they are no more powerful than the
-standard Turing machine. This provides some justification that Turing
-machines is a model of general-purpose computation.
-
-## Multi-Tape Turing machines
-
-::: {prf:definition} Multi-Tape Turing Machine
-
-A *multi-tape* Turing machine $M$ is one with an additional fixed number
-$k$ of tapes and tape heads. The additional tapes are called *work
-tapes*. Initially, all work tapes are blank and their tape heads are at
-the start of the work tapes. The transition function of $M$ depends on
-the symbols under all tape heads, and moves all tape heads
-simultaneously.
-
-:::
-
-::: {prf:theorem}
-
-A language $A$ is Turing-recognizable if and only if it is recognized by
-a multi-tape Turing machine.
-
-:::
-
-::: {prf:proof} Proof Sketch
-
-If $A$ is Turing-recognizable, then there is a multi-tape Turing machine
-that recognizes. This is because we can simulate the usual single-tape
-TM with a TM that has multiple tapes.
-
-Suppose that there is a multi-tape TM $M$ that recognizes $A$. We are
-now going to construct a single-tape TM $S$ that simulates $M$ on every
-input. The idea is to simulate multiple tapes with a single tape.
-
-At a high level, at each point in time, the contents of the tapes of $M$
-are concatenated together on the tape of $S$, separated by a special
-symbol '#'. Moreover, to keep track of the tape heads, $S$ uses a
-"marked" version of each tape symbol of $M$. In particular, for each
-tape symbol of $M$, there is a marked version $\dot x$.
-
-To simulate a transition of $M$, the TM $S$ scans the tape to determine
-the symbols under the tape heads of $M$, and then scans the tape to
-update it (the contents of the tape as well as the tape head locations)
-according to the transition function of $M$. The TM $S$ shifts the tape
-contents to create more room, if needed.
-
-The TM $S$ halts and accepts/rejects when $M$ does.
 
 :::
 

@@ -42,6 +42,8 @@ project:
     - file: computable.md
       children:
         - file: intro-tm.md
+        - file: variants-tm.md
+        - file: alg-reg-cfl.md
     - file: appendix.md
 
 site:
