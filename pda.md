@@ -55,9 +55,6 @@ fix this by first pushing a special "bottom-of-the-stack" marker
 (usually we use the \$ symbol) onto the stack, before doing anything
 else. Then, if we see the \$ symbol, we know that the stack is empty.
 
-We also assume that applying the pop operation to the bottom of the
-stack does not do anything.
-
 :::
 
 ::: {note} Incomplete descriptions

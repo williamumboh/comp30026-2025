@@ -36,7 +36,12 @@ project:
       children:
         - file: cfg.md
         - file: pda.md
-    - file: high-level.md
+        - file: high-level.md
+        - file: cfg-to-pda.md
+        - file: cfl-summary.md
+    - file: computable.md
+      children:
+        - file: intro-tm.md
     - file: appendix.md
 
 site:

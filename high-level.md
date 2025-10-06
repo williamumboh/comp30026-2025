@@ -1,3 +1,5 @@
+(sec-high-level)=
+
 # High Level Framework for Automata
 
 For the most part, we have described finite-state and pushdown automata
@@ -235,7 +237,7 @@ Technically, we need to push the \$ symbol onto the stack at the start
 to let us check if we have reached the bottom of the stack. However, for
 simplicity of description, we hide this detail here.
 
-::: {prf:example} PDA for $\{0^n1^n \mid n \geq 0\}$
+::: {prf:example label=pda-0n1n} PDA for $\{0^n1^n \mid n \geq 0\}$
 
 The following is a description of a PDA for $\{0^n1^n \mid n \geq 0\}$.
 The idea is that the program enters the Zeros block if and only if the
@@ -333,7 +335,7 @@ top of stack".
 
 :::
 
-::: {prf:example} PDA for even-length palindromes
+::: {prf:example label=pda-even-pal} PDA for even-length palindromes
 
 The following is a description of a PDA for the language of even-length
 palindromes
