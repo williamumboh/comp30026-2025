@@ -120,7 +120,12 @@ creating a TM $M$ that simulates $N$'s computation tree.
 
 At a high level, $M$ keeps track of the set of configurations
 $\mathcal{C}$ that $N$ is in at any point in time. This can be done by
-concatenating the configurations using the notation of the previous
-section ([notation](#sec-tm-config), separated by a special symbol \#.
+concatenating the configurations using the [notation](#sec-tm-config) of
+the previous section, separated by a special symbol \#.
+
+To apply the transition function, it scans through the list of
+configurations from left to right, and applies the transition function
+to each configuration. Whenever a new configuration needs to be added,
+it adds it to the end.
 
 :::
