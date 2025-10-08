@@ -100,6 +100,13 @@ The TM processes $w$ as follows:
       - write $x$ to the cell under the tape head, move tape head in
         direction $d$, and move to state $r$
 
+::: {note} Moving tape head to the left
+
+If the tape head is already at the start (i.e. left end of the tape),
+moving it to the left keeps it at the start of the tape.
+
+:::
+
 ::: {important} Outcomes of Turing machine computation
 
 A subtle but important feature of Turing machines that finite and
@@ -194,7 +201,9 @@ With these definitions, it is now clear that:
 ::: {prf:example} while loop
 
 Here is an example of a TM that never halts on any input. The TM simply
-moves the tape head to the right forever.
+moves the tape head to the left forever. Note that moving the tape head
+to the left when its already at the start of the tape means it stays at
+the start of the tape.
 
 :::::: {figure width=100px} ./tm-non-halting.png
 

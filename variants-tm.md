@@ -36,8 +36,8 @@ A *multi-tape* Turing machine $M$ is one with an additional fixed number
 $k$ of tapes and tape heads. The additional tapes are called *work
 tapes*. Initially, all work tapes are blank and their tape heads are at
 the start of the work tapes. The transition function of $M$ depends on
-the symbols under all tape heads, and moves all tape heads
-simultaneously.
+the current state and the symbols under all tape heads, and in a single
+step, writes to every tape and moves every tape head simultaneously.
 
 :::
 
@@ -129,3 +129,5 @@ to each configuration. Whenever a new configuration needs to be added,
 it adds it to the end.
 
 :::
+
+## Lecture Prep
