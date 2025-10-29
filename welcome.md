@@ -11,6 +11,13 @@ lecture. You are welcome to open up the website on your laptop or phone
 (it's actually mobile-friendly) to use as a reference during the
 lecture.
 
+::: {aside}
+
+Tip: You can hover over a linked definition, lemma or theorem and have
+it popup like [this](./hover-link-demo.mov).
+
+:::
+
 ::: {caution}
 
 The lecture notes and the lectures are meant to complement each other. Certain information is best presented in text form and others are best presented in a live delivery. Thus, there will be some information that is only presented in one of the two modes. Also note that some live demonstrations will not be captures on slides.

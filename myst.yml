@@ -44,6 +44,10 @@ project:
         - file: intro-tm.md
         - file: variants-tm.md
         - file: alg-reg-cfl.md
+    - file: limits.md
+      children:
+        - file: tm-accept.md
+        - file: infinities.md
     - file: appendix.md
 
 site:

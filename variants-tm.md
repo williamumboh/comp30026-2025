@@ -8,11 +8,18 @@ other models include $λ$-calculus, rewriting systems, and others.
 Although the models look very different, they all turn out to be
 equivalent to one another in terms of computational power.
 
-This led to the formulation of the Church-Turing Thesis which states
-that every reasonable model of unrestricted computation is equivalent to
-the Turing machine. In particular, it means that a problem can be solved
-using \<insert favorite programming language\> if and only if it can be
-solved by a Turing machine.
+This led to the formulation of the Church-Turing Thesis
+
+::: {note} Church-Turing Thesis
+
+Every reasonable model of unrestricted computation is equivalent to the
+Turing machine.
+
+:::
+
+In particular, it means that a problem can be solved using \<insert
+favorite programming language\> if and only if it can be solved by a
+Turing machine.
 
 ::: {note} Thesis vs Theorem
 
@@ -129,5 +136,3 @@ to each configuration. Whenever a new configuration needs to be added,
 it adds it to the end.
 
 :::
-
-## Lecture Prep
