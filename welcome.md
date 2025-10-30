@@ -37,9 +37,9 @@ The lecture notes and the lectures are meant to complement each other. Certain i
 | Week 9 Lecture 1 | [Finite Automata Summary](./fa-summary), @sec-CFL, @sec-CFG | [Sipser's slides](https://math.mit.edu/~sipser/18404/Lectures%20Fall%202020/Lecture%204%20final.pptx), [Sipser's lecture (up to 27:19)](https://youtu.be/m9eHViDPAJQ?si=LTxUewK89ifhyggV) (note Sipser does not cover Sections 5.1.4 and 5.1.5) |
 | Week 9 Lecture 2 | @sec-PDA |  |
 | Week 10 Lecture 1 | @sec-cfg-pda, @sec-cfl-summary, @sec-intro-tm |  |
-| Week 10 Lecture 2 | Equivalence of TM Variants, Algorithms for Regular and Context-Free Languages |  |
-| Week 11 | Undecidability, Reductions |  |
-| Week 12 | Reductions, Wrap-Up |  |
+| Week 10 Lecture 2 | @sec-variants, Algorithms for Regular and Context-Free Languages |  |
+| Week 11 | @sec-diagonalization, @sec-self-reference |  |
+| Week 12 | @sec-reductions, Wrap-Up |  |
 
 # Resources
 

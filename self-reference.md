@@ -1,3 +1,5 @@
+(sec-self-reference)=
+
 # Undecidabilty and Unrecognizability by Self-Reference
 
 The proof of the undecidability of $A_{TM}$ given in
