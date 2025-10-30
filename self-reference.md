@@ -103,10 +103,11 @@ accepts $w$.
 We now construct a TM $D$ using $H$ that takes as input encodings of
 Turing machines and behaves as follows:
 
-    On input <M>:
-      Run H on <M, <M>>
-      Accept if H rejects
-      Reject if H accepts
+On input $\langle M \rangle$:
+
+1.  Run $H$ on $\langle M, \langle M \rangle \rangle$
+2.  Accept if $H$ rejects
+3.  Reject if $H$ accepts
 
 Since $H$ is a decider, we can indeed run $H$ on
 $\langle M, \langle M \rangle \rangle$ so $D$ is also a decider.
@@ -126,8 +127,20 @@ get that $A_{TM}$ is in fact undecidable.
 
 There are lots of fun things you can do with self-reference:
 
-- quines are programs that print their own source code. This is how
-  viruses replicate.
-- creating a backdoored login program where the
+- [quines](https://en.wikipedia.org/wiki/Quine_(computing)) are programs
+  that print their own source code. This is how viruses replicate.
+- creating a backdoored login program with no trace in its source code.
+  The origin is [Ken
+  Thompson's](https://en.wikipedia.org/wiki/Ken_Thompson)[^1] Turing
+  Award lecture [Reflection On Trusting
+  Trust](https://dl.acm.org/doi/10.1145/358198.358210), now considered a
+  seminal work in computer security. You may find this [blog
+  post](https://www.cesarsotovalero.net/blog/revisiting-ken-thompson-reflection-on-trusting-trust.html)
+  easier to read.
 
-Check out for more examples.
+Check out Bernard Chazelle's excellent essay [Algorithm as an Idiom of
+Modern
+Science](https://www.cs.princeton.edu/~chazelle/pubs/algorithm.html) for
+more examples.
+
+[^1]: One of the creators of UNIX and the Go programming language.

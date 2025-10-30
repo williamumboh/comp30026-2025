@@ -50,6 +50,7 @@ project:
         - file: diagonalization.md
         - file: self-reference.md
         - file: reductions.md
+        - file: tm-closure.md
     - file: appendix.md
 
 site:

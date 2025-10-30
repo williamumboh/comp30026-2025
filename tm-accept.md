@@ -8,7 +8,7 @@ Equivalently, we define the language $A_{TM}$ to consist of strings
 $\langle M, w \rangle$ such that $M$ is a Turing machine and $M$ accepts
 $w$.
 
-::: {prf:theorem}
+::: {prf:theorem label=thm-tm-accept-recognizable}
 
 $A_{TM}$ is recognizable.
 
@@ -18,10 +18,8 @@ $A_{TM}$ is recognizable.
 
 The following Turing machine $U$ recognizes $A_{TM}$:
 
-    On input <M, w>:
-      Simulate M on input w
-      Accept if M halts and accepts
-      Reject if M halts and rejects
+On input $\langle M, w \rangle$: Simulate $M$ on input $w$ Accept if $M$
+halts and accepts Reject if $M$ halts and rejects
 
 The simulation can be done in a similar fashion as for DFAs. Details
 omitted.
@@ -40,19 +38,26 @@ if and only if $M$ accepts $w$, as desired.
 
 :::
 
-::: {caution}
+::::: {caution}
 
-It is tempting to claim that the following TM decides $A_{TM}$
+It is tempting to claim that the following TM decides $A_{TM}$.
 
-    On input <M, w>:
-      Simulate M on input w
-      Accept if M halts and accepts
-      Reject if M halts and rejects
-      Reject if M runs forever
+On input $\langle M, w\rangle$:
+
+1.  Simulate $M$ on input $w$
+2.  Accept if $M$ halts and accepts
+3.  Reject if $M$ halts and rejects
+4.  Reject if $M$ runs forever
 
 The issue is that "Reject if M runs forever" is not a valid TM action.
 
+::: {figure width=300px} ./titanic-meme.jpg
+
+An actual run of the TM.
+
 :::
+
+:::::
 
 ## Universal Turing machines
 
@@ -89,10 +94,11 @@ is recognizable, then $L$ is decidable.
 Let $M$ be a recognizer of $L$ and let $U$ be a decider for $A_{TM}$.
 Now we are going to define a TM $D$ that decides $L$.
 
-    On input w:
-      Run U on <M,w>
-      Accept if U accepts
-      Reject if U rejects
+On input $w$:
+
+1.  Run $U$ on $\langle M,w \rangle$
+2.  Accept if $U$ accepts
+3.  Reject if $U$ rejects
 
 Since $U$ is a decider, it always accepts or rejects, it never runs
 forever. Thus, $D$ also always halts. Moreover, for every string $w$,

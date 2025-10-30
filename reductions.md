@@ -62,13 +62,9 @@ $A_{TM}$ given a decider for $HALT_{TM}$.
 Let $H$ be a decider for $HALT_{TM}$. Consider the following TM $S$ for
 $A_{TM}$.
 
-    On input <M,w>:
-      Run H on <M,w>
-      If H rejects, reject
-      Else:
-        Run M on w
-        Accept if M accepts
-        Reject if M rejects
+On input $\langle M,w \rangle$: Run $H$ on $\langle M,w \rangle$ If $H$
+rejects, reject Else: Run $M$ on $w$ Accept if $M$ accepts Reject if $M$
+rejects
 
 First, we argue that $S$ is a decider. Since $H$ is a decider for
 $HALT_{TM}$, the first step always terminates. Moreover, we only run $M$
@@ -111,22 +107,24 @@ $A_{TM} \leq EMPTY_{TM}$.
 ::: {prf:proof}
 
 To show that $A_{TM} \leq EMPTY_{TM}$, we need to construct a decider
-for $A_{TM}$ given a decider for $EMPTY_{TM}$.
+for $A_{TM}$ given a decider for $EMPTY_{TM}$. The reduction is trickier
+than the one for $HALT_{TM}$ and involves constructing a TM that we then
+run the decider for $EMPTY_{TM}$ on.
 
 Let $H$ be a decider for $EMPTY_{TM}$. Consider the following TM $S$ for
-$A_{TM}$. The reduction is trickier than the one for $HALT_{TM}$ and
-involves constructing a TM that we then run $H$ on.
+$A_{TM}$.
 
-    On input <M,w>:
-      Construct TM M_w that behaves as follows:
-         On input x:
-            Run M on w
-            Accept if M accepts
-            Reject if M rejects
-            Run forever if M runs forever
-      Run H on <M_w>
-      Accept if H rejects
-      Reject if H accepts
+On input $\langle M,w \rangle$:
+
+1.  Construct TM $M_w$ that behaves as follows:
+    - On input $x$:
+      - Run $M$ on $w$
+      - Accept if $M$ accepts
+      - Reject if $M$ rejects
+      - Run forever if $M$ runs forever
+2.  Run $H$ on $\langle M_w \rangle$
+3.  Accept if $H$ rejects
+4.  Reject if $H$ accepts
 
 First, observe that whether or not $M_w$ accepts $x$ is independent of
 $x$, it only depends on whether $M$ accepts $w$. Thus, $M_w$ accepts
@@ -172,11 +170,12 @@ for $EMPTY_{TM}$ given a decider for $EQ_{TM}$.
 Let $H$ be a decider for $EQ_{TM}$. Consider the following TM $S$ for
 $EMPTY_{TM}$.
 
-    On input <M>:
-      Construct TM N that rejects every string
-      Run H on <M, N>
-      Accept if H accepts
-      Reject if H rejects
+On input $\langle M \rangle$:
+
+1.  Construct TM $N$ that rejects every string
+2.  Run $H$ on $\langle M, N\rangle$
+3.  Accept if $H$ accepts
+4.  Reject if $H$ rejects
 
 Since $N$ rejects every string, we get that $L(N) = \emptyset$ and so
 $S$ accepts $\langle M \rangle$ if and only if
