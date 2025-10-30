@@ -1,6 +1,6 @@
 (sec-intro-tm)=
 
-# Introduction to Turing Machines \[DRAFT\]
+# Introduction to Turing Machines
 
 ## Turing Machines, Informally
 
