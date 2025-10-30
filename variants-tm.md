@@ -1,3 +1,5 @@
+(sec-variants)=
+
 # Church-Turing Thesis
 
 In the early 1900s, mathematicians wanted to formalize what it means for

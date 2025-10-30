@@ -1,3 +1,5 @@
+(sec-reductions)=
+
 # Reductions
 
 Previously, we used diagonalization to show undecidability. We now turn
