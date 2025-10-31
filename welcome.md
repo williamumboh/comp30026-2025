@@ -35,11 +35,13 @@ The lecture notes and the lectures are meant to complement each other. Certain i
 | Week 8 Lecture 1 | @sec-nonreg | [Slides](./w8l1-slides.pdf) |
 | Week 8 Lecture 2 | @sec-nonreg | [Slides](./w8l2-slides.pdf) |
 | Week 9 Lecture 1 | [Finite Automata Summary](./fa-summary), @sec-CFL, @sec-CFG | [Sipser's slides](https://math.mit.edu/~sipser/18404/Lectures%20Fall%202020/Lecture%204%20final.pptx), [Sipser's lecture (up to 27:19)](https://youtu.be/m9eHViDPAJQ?si=LTxUewK89ifhyggV) (note Sipser does not cover Sections 5.1.4 and 5.1.5) |
-| Week 9 Lecture 2 | @sec-PDA |  |
-| Week 10 Lecture 1 | @sec-cfg-pda, @sec-cfl-summary, @sec-intro-tm |  |
-| Week 10 Lecture 2 | @sec-variants, Algorithms for Regular and Context-Free Languages |  |
-| Week 11 | @sec-diagonalization, @sec-self-reference |  |
-| Week 12 | @sec-reductions, Wrap-Up |  |
+| Week 9 Lecture 2 | @sec-PDA | [Cezary's Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25005055?module_item_id=6985915) |
+| Week 10 Lecture 1 | @sec-cfg-pda, @sec-cfl-summary, @sec-intro-tm | [Slides Part 1](https://canvas.lms.unimelb.edu.au/courses/215477/files/25195562?module_item_id=7013971), [Slides Part 2](https://canvas.lms.unimelb.edu.au/courses/215477/files/25104011?module_item_id=7001717) |
+| Week 10 Lecture 2 | @sec-variants, @sec-alg-reg-cfl | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25195591?module_item_id=7014019) |
+| Week 11 Lecture 2 | @sec-diagonalization | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25178539?module_item_id=7011087) |
+| Week 11 Lecture 2 | @sec-self-reference | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25183900?module_item_id=7011852) |
+| Week 12 Lecture 1 | @sec-reductions, @sec-tm-closure | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25244885?module_item_id=7018377) |
+| Week 12 Lecture 2 | Wrap-Up |  |
 
 # Resources
 

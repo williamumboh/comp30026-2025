@@ -1,6 +1,6 @@
 (sec-cfl-summary)=
 
-# Summary \[DRAFT\]
+# Summary
 
 In this section, we covered context-free languages and saw two
 equivalent definitions:

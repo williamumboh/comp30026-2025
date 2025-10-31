@@ -1,3 +1,5 @@
+(sec-tm-closure)=
+
 # Closure Properties
 
 We now consider closure properties of recognizable and decidable

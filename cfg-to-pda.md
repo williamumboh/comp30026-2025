@@ -1,6 +1,6 @@
 (sec-cfg-pda)=
 
-# CFG = PDA \[DRAFT\]
+# CFG = PDA
 
 Previously, we saw that finite automata and regular expressions are
 equivalent in the sense that the set of languages that finite automata
