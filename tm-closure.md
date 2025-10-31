@@ -82,9 +82,10 @@ On input $w$:
 1.  Compute the initial configurations of $M_1$ and $M_2$ on $w$
 2.  While neither of the current configuration of $M_1$ and $M_2$ has
     halted:
-    - Compute the next configurations of $M_1$ and $M_2$ by applying
-      their respective transition functions to their current
-      configurations
+    - Compute the next configuration of $M_1$ by applying its transition
+      function to its current configuration
+    - Compute the next configuration of $M_2$ by applying its transition
+      function to its current configuration
 3.  Accept when $M_1$ accepts or $M_2$ rejects
 4.  Reject when $M_1$ rejects or $M_2$ accepts
 
