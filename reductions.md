@@ -62,9 +62,14 @@ $A_{TM}$ given a decider for $HALT_{TM}$.
 Let $H$ be a decider for $HALT_{TM}$. Consider the following TM $S$ for
 $A_{TM}$.
 
-On input $\langle M,w \rangle$: Run $H$ on $\langle M,w \rangle$ If $H$
-rejects, reject Else: Run $M$ on $w$ Accept if $M$ accepts Reject if $M$
-rejects
+On input $\langle M,w \rangle$:
+
+1.  Run $H$ on $\langle M,w \rangle$
+2.  If $H$ rejects, reject
+3.  Else:
+    - Run $M$ on $w$
+    - Accept if $M$ accepts
+    - Reject if $M$ rejects
 
 First, we argue that $S$ is a decider. Since $H$ is a decider for
 $HALT_{TM}$, the first step always terminates. Moreover, we only run $M$
