@@ -70,7 +70,7 @@ allows us to prove lower bounds on the amount of memory that is needed
 to recognize $L$.
 
 In more detail, the technique lets us prove **lower bounds on the number
-of states a DFA needs to recognize \$L\$**, i.e. it allows us to prove
+of states a DFA needs to recognize** $L$, i.e. it allows us to prove
 statements of the form "no DFA with fewer than 5 states can recognize
 $L$". Since a DFA has a fixed number of states, to show that no DFA can
 recognize $L$, we will prove that **for every non-negative integer $k$,
