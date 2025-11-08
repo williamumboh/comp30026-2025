@@ -59,8 +59,8 @@ We now use proof by contradiction to show that there is no recognizer
 for $L_S$.
 
 Suppose, towards a contradiction, that there is a TM $R$ that recognizes
-$L_S$. Thus, $R$ accepts $\langle M \rangle$ if and only if $M$ accepts
-its own encoding $\langle M \rangle$.
+$L_S$. Thus, $R$ accepts $\langle M \rangle$ if and only if $M$ does not
+accept its own encoding $\langle M \rangle$.
 
 What happens if we run $R$ on its own encoding $\langle R \rangle$?
 There are two possibilities:
