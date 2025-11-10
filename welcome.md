@@ -41,7 +41,7 @@ The lecture notes and the lectures are meant to complement each other. Certain i
 | Week 11 Lecture 2 | @sec-diagonalization | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25178539?module_item_id=7011087) |
 | Week 11 Lecture 2 | @sec-self-reference | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25183900?module_item_id=7011852) |
 | Week 12 Lecture 1 | @sec-reductions, @sec-tm-closure | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25244885?module_item_id=7018377) |
-| Week 12 Lecture 2 | Wrap-Up |  |
+| Week 12 Lecture 2 | Wrap-Up | [Slides](https://canvas.lms.unimelb.edu.au/courses/215477/files/25253712?module_item_id=7019839) |
 
 # Resources
 
@@ -53,7 +53,8 @@ subject.
   Science](https://introtcs.org/public/index.html) by Boaz Barak
   (Harvard University)
 - [CS 103: Mathematical Foundations of
-  Computing](https://cs121.boazbarak.org) (Stanford University)
+  Computing](https://web.stanford.edu/class/archive/cs/cs103/cs103.1252/)
+  (Stanford University)
 - [CS 251: Great Ideas in Theoretical Computer
   Science](https://s23.cs251.com/index.html) (CMU)
 - [Notes on Models of
